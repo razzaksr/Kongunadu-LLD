@@ -17,6 +17,9 @@ class ZealousBoard:
         self.db = self.client.kongunadu
         self.collection = self.db.task
     def load(self):
+        self.buckets={
+            "todo":[],"progress":[],"review":[],"done":[]
+        }
         bsons = self.collection.find()
         for bson in bsons:
             # json to object
@@ -50,8 +53,11 @@ class ZealousBoard:
             "taskStoryPoints":task.taskStoryPoints,
             "taskBucket":task.taskBucket
         }
-        print(jsonTask)
-        self.collection.insert_one(jsonTask);
+        # print(jsonTask)
+        if bucket == 'todo':
+            self.collection.insert_one(jsonTask);
+        else:
+            self.collection.update_one({"taskId":task.taskId},{"$set":jsonTask})
         print(task.taskId," included in the ",bucket)
         # if bucket == 'todo' and task.taskBucket=='todo':
         #     # self.buckets['todo'].append(task)
