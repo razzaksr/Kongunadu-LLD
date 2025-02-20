@@ -1,10 +1,25 @@
 from Task import *
+from dotenv import *
+import os
+from pymongo import *
+
 class ZealousBoard:
     '''data with CRUD'''
     buckets={
         "todo":[],"progress":[],"review":[],"done":[]
     }
+    def __init__(self):
+        load_dotenv()
+        uri = mongodb+srv://os.getenv('user'):os.getenv('password')@cluster0.ptmlylq.mongodb.net/kongunadu?retryWrites=true&w=majority&appName=Cluster0
+        client = MongoClient(uri)
+        collection = client.kongunadu
     # CRUD operations: create task, update task, delete task, read task
+    
+    def viewBoard(self):
+        for bucket in self.buckets.keys():
+            print(bucket,"bucket task's of ")
+            for x in self.buckets[bucket]:
+                    print(str(x))
     
     # adding task to bucket>> Create
     def addToBucket(self,task,bucket):

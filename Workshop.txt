@@ -52,3 +52,24 @@ front end: plain screen
 backend : python
 data end: dictionary(temporary data storage)
 
+
+https://github.com/razzaksr/Kongunadu-LLD
+
+
+
+
+
+Menu driven application:
+
+add mongodb atlas as data logic:
+
+1. Create free cluster in atlas
+2. install required modules in python
+	dnspython
+	pymongo
+	python-dotenv
+
+
+
+
+
