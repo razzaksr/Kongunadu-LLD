@@ -1,0 +1,54 @@
+Software:
+	automate process/ hardware
+
+Logics of s/w:
+	1. Presentation logic/ Frontend
+	2. Business logic/ Backend
+	3. Data logic/ Data end
+
+To whom we support/ Industry verticals:
+1. Banking
+2. Logistics
+3. Health
+4. Manufacturing
+5. Automobile
+.
+.
+
+SDLC:
+Requirements:
+Design:
+	HLD:
+	LLD:
+		Class diagram, State diagram, use case diagram
+
+Develop:
+Test:
+Deploy:
+
+
+Building Kanban board in SCRUM of Agile:
+
+Low Level Design:
+Task: Class
+	id
+	name
+	assigner
+	assignee
+	story points
+	bucket id
+
+
+Buckets: Create Read Update Delete
+Todo
+In progress
+In Review
+Done
+
+
+
+Console Application:
+front end: plain screen
+backend : python
+data end: dictionary(temporary data storage)
+
